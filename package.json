@@ -19,19 +19,18 @@
     "react-redux": "^8.1.1"
   },
   "devDependencies": {
+    "@molao-ui/eslint-config": "^3.1.2",
     "@types/react": "^18.0.37",
     "@types/react-dom": "^18.0.11",
-    "@typescript-eslint/eslint-plugin": "^5.59.0",
+    "@typescript-eslint/eslint-plugin": "^5.60.1",
     "@typescript-eslint/parser": "^5.59.0",
     "@vitejs/plugin-react": "^4.0.0",
     "autoprefixer": "^10.4.14",
-    "eslint": "^8.38.0",
-    "eslint-plugin-react-hooks": "^4.6.0",
-    "eslint-plugin-react-refresh": "^0.3.4",
+    "eslint": "^8.44.0",
     "postcss": "^8.4.24",
     "tailwind-scrollbar": "^3.0.4",
     "tailwindcss": "^3.3.2",
-    "typescript": "^5.0.2",
+    "typescript": "^5.1.6",
     "vite": "^4.3.9"
   }
 }

@@ -1,13 +1,17 @@
-import { Video } from "lucide-react";
+import { Video } from 'lucide-react'
 
 interface LessonProps {
-  title: string;
-  duration: string;
+  title: string
+  duration: string
+  onPlay: () => void
 }
 
-export function Lesson({ title, duration }: LessonProps) {
+export function Lesson({ title, onPlay, duration }: LessonProps) {
   return (
-    <button className="flex items-center gap-3 text-sm text-zinc-400">
+    <button
+      onClick={onPlay}
+      className="flex items-center gap-3 text-sm text-zinc-400"
+    >
       <Video className="w-4 h-4 text-zinc-500" />
 
       <span className="text-left">{title}</span>
@@ -16,5 +20,5 @@ export function Lesson({ title, duration }: LessonProps) {
         {duration}
       </span>
     </button>
-  );
+  )
 }

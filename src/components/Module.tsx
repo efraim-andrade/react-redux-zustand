@@ -1,18 +1,23 @@
-import { ChevronDown } from "lucide-react";
-import { Lesson } from "./Lesson";
-import * as Collapsible from "@radix-ui/react-collapsible";
-import { useAppSelector } from "../store";
+import * as Collapsible from '@radix-ui/react-collapsible'
+import { ChevronDown } from 'lucide-react'
+import { useDispatch } from 'react-redux'
+
+import { play } from '../store/slices/player'
+import { useAppSelector } from '../store'
+import { Lesson } from './Lesson'
 
 interface ModuleProps {
-  title: string;
-  amountOfLessons: number;
-  moduleIndex: number;
+  title: string
+  moduleIndex: number
+  amountOfLessons: number
 }
 
-export function Module({ amountOfLessons, title, moduleIndex }: ModuleProps) {
+export function Module({ title, moduleIndex, amountOfLessons }: ModuleProps) {
+  const dispatch = useDispatch()
+
   const lessons = useAppSelector((state) => {
-    return state.player.course.modules[moduleIndex].lessons;
-  });
+    return state.player.course.modules[moduleIndex].lessons
+  })
 
   return (
     <Collapsible.Root className="group">
@@ -31,17 +36,18 @@ export function Module({ amountOfLessons, title, moduleIndex }: ModuleProps) {
 
       <Collapsible.Content>
         <nav className="relative flex flex-col gap-4 p-6">
-          {lessons.map((lesson) => {
+          {lessons.map((lesson, lessonIndex) => {
             return (
               <Lesson
                 key={lesson.id}
                 title={lesson.title}
                 duration={lesson.duration}
+                onPlay={() => dispatch(play([moduleIndex, lessonIndex]))}
               />
-            );
+            )
           })}
         </nav>
       </Collapsible.Content>
     </Collapsible.Root>
-  );
+  )
 }
