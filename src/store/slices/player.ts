@@ -72,7 +72,7 @@ const initialState = {
   },
 }
 
-const playerSlice = createSlice({
+export const playerSlice = createSlice({
   initialState,
   name: 'player',
 
