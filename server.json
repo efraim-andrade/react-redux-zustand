@@ -1,0 +1,82 @@
+{
+  "courses": [
+    {
+      "id": 1,
+      "modules": [
+        {
+          "id": "1",
+          "lessons": [
+            {
+              "duration": "13:45",
+              "id": "Jai8w6K_GnY",
+              "title": "CSS Modules"
+            },
+            {
+              "duration": "10:05",
+              "id": "w-DW4DhDfcw",
+              "title": "Estilização do Post"
+            },
+            {
+              "duration": "06:33",
+              "id": "D83-55LUdKE",
+              "title": "Componente: Header"
+            },
+            {
+              "duration": "09:12",
+              "id": "W_ATsETujaY",
+              "title": "Componente: Sidebar"
+            },
+            {
+              "duration": "03:23",
+              "id": "Pj8dPeameYo",
+              "title": "CSS Global"
+            },
+            {
+              "duration": "11:34",
+              "id": "8KBq2vhwbac",
+              "title": "Form de comentários"
+            }
+          ],
+          "title": "Iniciando com React"
+        },
+        {
+          "id": "2",
+          "lessons": [
+            {
+              "duration": "13:45",
+              "id": "gE48FQXRZ_o",
+              "title": "Componente: Comment"
+            },
+            {
+              "duration": "10:05",
+              "id": "Ng_Vk4tBl0g",
+              "title": "Responsividade"
+            },
+            {
+              "duration": "06:33",
+              "id": "h5JA3wfuW1k",
+              "title": "Interações no JSX"
+            },
+            {
+              "duration": "09:12",
+              "id": "1G0vSTqWELg",
+              "title": "Utilizando estado"
+            }
+          ],
+          "title": "Estrutura da aplicação"
+        },
+        {
+          "id": "3",
+          "lessons": [
+            {
+              "duration": "09:13",
+              "id": "4rMShwohDuA",
+              "title": "Extensões úteis e não tão conhecidas do js"
+            }
+          ],
+          "title": "Ferramentas"
+        }
+      ]
+    }
+  ]
+}
