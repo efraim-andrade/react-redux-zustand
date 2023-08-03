@@ -3,9 +3,11 @@ import { it, expect, describe } from 'vitest'
 import { play, next, PlayerState, player as reducer } from './player'
 
 const exampleState: PlayerState = {
-  currentLessonIndex: 0,
+  isLoading: false,
   currentModuleIndex: 0,
+  currentLessonIndex: 0,
   course: {
+    id: 1,
     modules: [
       {
         id: 1,
