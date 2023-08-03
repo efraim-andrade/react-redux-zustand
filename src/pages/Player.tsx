@@ -1,16 +1,14 @@
 import { MessageCircle } from 'lucide-react'
-import { useDispatch } from 'react-redux'
 import { useEffect } from 'react'
 
-import { start, useCurrentLesson } from '../store/slices/player'
-import { Module } from '../components/Module'
+import { loadCourse, useCurrentLesson } from '../store/slices/player'
+import { useAppDispatch, useAppSelector } from '../store'
 import { Header } from '../components/Header'
+import { Module } from '../components/Module'
 import { Video } from '../components/Video'
-import { useAppSelector } from '../store'
-import { api } from '../lib/axios'
 
 export function Player() {
-  const dispatch = useDispatch()
+  const dispatch = useAppDispatch()
 
   const modules = useAppSelector((state) => {
     return state.player.course?.modules
@@ -19,16 +17,14 @@ export function Player() {
   const { currentLesson } = useCurrentLesson()
 
   useEffect(() => {
+    dispatch(loadCourse())
+  }, [dispatch])
+
+  useEffect(() => {
     if (currentLesson) {
       document.title = `Assistindo: ${currentLesson.title} | ReduxLessons`
     }
   }, [currentLesson])
-
-  useEffect(() => {
-    api.get('/courses/1').then((response) => {
-      dispatch(start(response.data))
-    })
-  }, [dispatch])
 
   return (
     <div className="h-screen bg-zinc-950 text-zinc-50 flex justify-center items-center">
