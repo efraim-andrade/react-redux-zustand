@@ -80,7 +80,7 @@ describe('Zustand Store', () => {
     expect(currentLessonIndex).toBe(0)
   })
 
-  it('should not update the current module and lesson index if there is no next lesson available!', () => {
+  it('should not update the current module and lesson index if there is no next lesson available', () => {
     store.setState({ course })
 
     const { next } = store.getState()
